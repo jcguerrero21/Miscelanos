@@ -1,0 +1,38 @@
+
+<div class="row">
+  <div class="col-md-3">
+    <button type="button" (click)="alerta='success'" class="btn btn-success">
+      Cambiar a success
+    </button>
+  </div>
+  <div class="col-md-3">
+    <button type="button" (click)="alerta='info'" class="btn btn-info">
+      Cambiar a info
+    </button>
+  </div>
+  <div class="col-md-3">
+    <button type="button" (click)="alerta='warning'" class="btn btn-warning">
+      Cambiar a warning
+    </button>
+  </div>
+
+</div>
+
+<br>
+<div [ngSwitch]="alerta">
+  <div *ngSwitchCase="'success'">success</div>
+  <div *ngSwitchCase="'info'">info</div>
+  <div *ngSwitchCase="'warning'">warning</div>
+</div>
+<br>
+<div [ngSwitch]="alerta">
+  <div *ngSwitchCase="'success'" class="alert alert-success" role="alert">
+    This is a success alert—check it out!
+  </div>
+  <div *ngSwitchCase="'warning'" class="alert alert-warning" role="alert">
+    This is a warning alert—check it out!
+  </div>
+  <div *ngSwitchCase="'info'" class="alert alert-info" role="alert">
+    This is a info alert—check it out!
+  </div>
+</div>
